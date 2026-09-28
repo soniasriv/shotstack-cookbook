@@ -1,0 +1,239 @@
+{
+  "timeline": {
+    "fonts": [
+      {
+        "src": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm45xW5rygbi49c.ttf"
+      }
+    ],
+    "background": "#000000",
+    "tracks": [
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "rich-caption",
+              "src": "alias://intro",
+              "font": {
+                "family": "JTUSjIg1_i6t8kCHKm45xW5rygbi49c",
+                "size": 36,
+                "color": "#FFFFFF",
+                "weight": "700"
+              },
+              "background": {
+                "color": "#000000",
+                "opacity": 0.55,
+                "borderRadius": 8,
+                "padding": 12
+              },
+              "align": {
+                "horizontal": "center",
+                "vertical": "bottom"
+              }
+            },
+            "fit": "none",
+            "width": 1000,
+            "height": 300,
+            "position": "bottom",
+            "offset": {
+              "x": 0,
+              "y": 0.08
+            },
+            "start": 0,
+            "length": "alias://intro"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "rich-text",
+              "text": "{{PRODUCT_NAME}}",
+              "font": {
+                "family": "JTUSjIg1_i6t8kCHKm45xW5rygbi49c",
+                "size": 64,
+                "color": "#FFFFFF",
+                "weight": "700"
+              },
+              "align": {
+                "horizontal": "center",
+                "vertical": "middle"
+              }
+            },
+            "start": "alias://montage",
+            "length": 3.5,
+            "position": "top",
+            "offset": {
+              "x": 0,
+              "y": -0.08
+            },
+            "width": 960,
+            "height": 300,
+            "transition": {
+              "in": "slideUpFast",
+              "out": "fadeFast"
+            }
+          },
+          {
+            "asset": {
+              "type": "rich-text",
+              "text": "{{PRICE}}",
+              "font": {
+                "family": "JTUSjIg1_i6t8kCHKm45xW5rygbi49c",
+                "size": 54,
+                "color": "#0B0B0B",
+                "weight": "700"
+              },
+              "align": {
+                "horizontal": "center",
+                "vertical": "middle"
+              },
+              "background": {
+                "color": "{{ACCENT}}",
+                "opacity": 1,
+                "borderRadius": 12,
+                "padding": 16
+              }
+            },
+            "start": "auto",
+            "length": 3.5,
+            "position": "top",
+            "offset": {
+              "x": 0,
+              "y": -0.08
+            },
+            "width": 960,
+            "height": 300,
+            "transition": {
+              "in": "fade",
+              "out": "fadeFast"
+            }
+          },
+          {
+            "asset": {
+              "type": "rich-text",
+              "text": "{{CTA}}",
+              "font": {
+                "family": "JTUSjIg1_i6t8kCHKm45xW5rygbi49c",
+                "size": 46,
+                "color": "#0B0B0B",
+                "weight": "700"
+              },
+              "align": {
+                "horizontal": "center",
+                "vertical": "middle"
+              },
+              "background": {
+                "color": "{{ACCENT}}",
+                "opacity": 1,
+                "borderRadius": 12,
+                "padding": 16
+              }
+            },
+            "start": "auto",
+            "length": 4,
+            "position": "bottom",
+            "offset": {
+              "x": 0,
+              "y": 0.1
+            },
+            "width": 960,
+            "height": 260,
+            "transition": {
+              "in": "fade"
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "video",
+              "src": "{{INTRO_URL}}"
+            },
+            "alias": "intro",
+            "start": 0,
+            "length": "auto",
+            "fit": "crop"
+          },
+          {
+            "asset": {
+              "type": "image",
+              "src": "{{IMG1}}"
+            },
+            "alias": "montage",
+            "start": "auto",
+            "length": 3.5,
+            "fit": "crop",
+            "effect": "zoomInSlow",
+            "transition": {
+              "in": "fade"
+            }
+          },
+          {
+            "asset": {
+              "type": "image",
+              "src": "{{IMG2}}"
+            },
+            "start": "auto",
+            "length": 3.5,
+            "fit": "crop",
+            "effect": "slideLeftSlow",
+            "transition": {
+              "in": "fadeSlow"
+            }
+          },
+          {
+            "asset": {
+              "type": "image",
+              "src": "{{IMG3}}"
+            },
+            "start": "auto",
+            "length": 4,
+            "fit": "crop",
+            "effect": "zoomOutSlow",
+            "transition": {
+              "in": "fadeSlow",
+              "out": "fadeSlow"
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://shotstack-assets.s3.amazonaws.com/music/unminus/lit.mp3",
+              "effect": "fadeOut",
+              "volume": [
+                {
+                  "from": 0.12,
+                  "to": 0.12,
+                  "start": 0,
+                  "length": 8
+                },
+                {
+                  "from": 0.12,
+                  "to": 0.45,
+                  "start": 8,
+                  "length": 1.5
+                }
+              ]
+            },
+            "start": 0,
+            "length": "end"
+          }
+        ]
+      }
+    ]
+  },
+  "output": {
+    "format": "mp4",
+    "size": {
+      "width": 1080,
+      "height": 1920
+    }
+  }
+}
