@@ -1,0 +1,125 @@
+{
+  "timeline": {
+    "fonts": [
+      {
+        "src": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm45xW5rygbi49c.ttf"
+      }
+    ],
+    "background": "#0B0B0B",
+    "tracks": [
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "html5",
+              "html": "<div id=\"stat\"><span id=\"n\">0</span><span id=\"suffix\">{{SUFFIX}}</span></div>",
+              "css": "html,body{margin:0;height:100%;background:transparent;display:flex;align-items:center;justify-content:center}#stat{font-family:sans-serif;font-weight:800;font-size:{{STAT_SIZE}}px;color:{{ACCENT}};letter-spacing:-0.02em;line-height:1}",
+              "js": "const target=Number(\"{{STAT}}\");const el=document.getElementById(\"n\");const t0=performance.now();const dur=1600;function tick(t){const p=Math.min(1,(t-t0)/dur);const e=1-Math.pow(1-p,3);el.textContent=Math.round(target*e).toLocaleString(\"en-US\");if(p<1)requestAnimationFrame(tick);}requestAnimationFrame(tick);"
+            },
+            "start": 0.8,
+            "length": 5.2,
+            "position": "center",
+            "offset": {
+              "x": 0,
+              "y": 0.12
+            },
+            "width": 900,
+            "height": 300,
+            "transition": {
+              "out": "fadeFast"
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "svg",
+              "src": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"220\" height=\"14\" viewBox=\"0 0 220 14\"><rect x=\"0\" y=\"0\" width=\"220\" height=\"14\" rx=\"7\" fill=\"{{ACCENT}}\"/></svg>"
+            },
+            "start": 1.2,
+            "length": 4.8,
+            "position": "center",
+            "offset": {
+              "x": 0,
+              "y": -0.02
+            },
+            "width": 220,
+            "height": 14,
+            "transition": {
+              "in": "fade",
+              "out": "fadeFast"
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "rich-text",
+              "text": "{{LABEL}}",
+              "font": {
+                "family": "JTUSjIg1_i6t8kCHKm45xW5rygbi49c",
+                "size": 44,
+                "color": "#FFFFFF",
+                "weight": "700"
+              },
+              "align": {
+                "horizontal": "center",
+                "vertical": "middle"
+              },
+              "animation": {
+                "preset": "fadeIn",
+                "duration": 0.5
+              },
+              "style": {
+                "textTransform": "uppercase",
+                "letterSpacing": 4
+              }
+            },
+            "start": 1.4,
+            "length": 4.6,
+            "position": "center",
+            "offset": {
+              "x": 0,
+              "y": -0.14
+            },
+            "width": 900,
+            "height": 260,
+            "transition": {
+              "out": "fadeFast"
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "image",
+              "src": "{{BACKGROUND}}"
+            },
+            "start": 0,
+            "length": 6,
+            "fit": "crop",
+            "effect": "zoomInSlow",
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            },
+            "filter": "darken"
+          }
+        ]
+      }
+    ]
+  },
+  "output": {
+    "format": "mp4",
+    "size": {
+      "width": 1080,
+      "height": 1080
+    }
+  }
+}
