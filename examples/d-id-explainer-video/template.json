@@ -1,0 +1,142 @@
+{
+  "timeline": {
+    "fonts": [
+      {
+        "src": "https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTfvlaQc78lA2.ttf"
+      }
+    ],
+    "background": "#0E1117",
+    "tracks": [
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "rich-caption",
+              "src": "alias://talk-1",
+              "font": {
+                "family": "UcCo3FwrK3iLTfvlaQc78lA2",
+                "size": 36,
+                "color": "#FFFFFF",
+                "weight": "700"
+              },
+              "background": {
+                "color": "#000000",
+                "opacity": 0.55,
+                "borderRadius": 8,
+                "padding": 12
+              },
+              "align": {
+                "horizontal": "center",
+                "vertical": "bottom"
+              }
+            },
+            "fit": "none",
+            "width": 1000,
+            "height": 300,
+            "position": "bottom",
+            "offset": {
+              "x": 0,
+              "y": 0.08
+            },
+            "start": "alias://talk-1",
+            "length": "alias://talk-1"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "video",
+              "src": "{{TALK_1}}"
+            },
+            "alias": "talk-1",
+            "start": 3,
+            "length": "auto",
+            "fit": "crop",
+            "scale": 0.28,
+            "position": "bottomRight",
+            "offset": {
+              "x": -0.03,
+              "y": 0.06
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "image",
+              "src": "{{SLIDE_1}}"
+            },
+            "start": 3,
+            "length": "alias://talk-1",
+            "fit": "contain",
+            "effect": "zoomInSlow",
+            "transition": {
+              "in": "fade"
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "rich-text",
+              "text": "{{TITLE}}",
+              "font": {
+                "family": "UcCo3FwrK3iLTfvlaQc78lA2",
+                "size": 72,
+                "color": "#FFFFFF",
+                "weight": "700"
+              },
+              "align": {
+                "horizontal": "center",
+                "vertical": "middle"
+              }
+            },
+            "start": 0,
+            "length": 3,
+            "position": "center",
+            "width": 1400,
+            "height": 400,
+            "transition": {
+              "in": "fade",
+              "out": "fadeFast"
+            }
+          },
+          {
+            "asset": {
+              "type": "rich-text",
+              "text": "{{END_CARD}}",
+              "font": {
+                "family": "UcCo3FwrK3iLTfvlaQc78lA2",
+                "size": 56,
+                "color": "#FFFFFF",
+                "weight": "700"
+              },
+              "align": {
+                "horizontal": "center",
+                "vertical": "middle"
+              }
+            },
+            "start": "auto",
+            "length": 3,
+            "position": "center",
+            "width": 1400,
+            "height": 300,
+            "transition": {
+              "in": "fade"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "output": {
+    "format": "mp4",
+    "resolution": "1080"
+  }
+}
